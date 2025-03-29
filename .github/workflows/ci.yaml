@@ -1,0 +1,14 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  tests-and-lints:
+    uses: ./.github/workflows/test.yaml
+    secrets:
+      github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
