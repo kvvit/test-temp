@@ -48,5 +48,10 @@ jobs:
           echo ${{ github.ref }}
           git rev-parse --abbrev-ref HEAD
 
+      - name: Where am I
+        run: |
+          pwd
+          ls -la
+
       - name: Run test
         run: cat ./flie.txt
