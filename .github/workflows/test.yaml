@@ -42,3 +42,5 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           ref: ${{ github.ref }}
+      - name: Check branch name
+        run: echo ${{ github.ref }}
