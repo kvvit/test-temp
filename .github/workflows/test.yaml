@@ -43,4 +43,6 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Check branch name
-        run: echo ${{ github.ref }}
+        run: |
+          echo ${{ github.ref }}
+          git rev-parse --abbrev-ref HEAD
