@@ -54,4 +54,4 @@ jobs:
           ls -la
 
       - name: Run test
-        run: cat ./flie.txt
+        run: cat ./file.txt
