@@ -1,0 +1,15 @@
+name: Deploy test
+
+on:
+  push:
+    branches:
+      - master
+      - release/*
+      - dev-*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Pring branch name
+        run: echo ${{ github.ref_name }}
