@@ -13,3 +13,6 @@ jobs:
     steps:
       - name: Pring branch name
         run: echo ${{ github.ref_name }}
+
+      - name: Pring GITHUB_REF
+        run: echo $GITHUB_REF
