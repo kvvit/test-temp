@@ -15,4 +15,9 @@ jobs:
         run: echo ${{ github.ref_name }}
 
       - name: Pring GITHUB_REF
-        run: echo $GITHUB_REF
+        run: |
+          echo "GITHUB_REF is:" $GITHUB_REF
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          echo: "BRANCH_NAME is:" $BRANCH_NAME
+          SANITIZED_BRANCH=$(echo "$BRANCH_NAME" | tr '/.' '-' | tr '_' '-' | tr '[:upper:]' '[:lower:]')
+          echo: "SANITIZED_BRANCH is:" $SANITIZED_BRANCH
